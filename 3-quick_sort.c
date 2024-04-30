@@ -17,7 +17,7 @@ void lomuto(int *array, int low, int high, size_t size)
 	int i;
 
 	if ((high - low) == 1)
-                return;
+		return;
 	for (i = low; i < high; i++)
 	{
 		if (array[i] <= pivot)
@@ -57,5 +57,7 @@ void lomuto(int *array, int low, int high, size_t size)
 
 void quick_sort(int *array, size_t size)
 {
+	if (!array || size < 2)
+		return;
 	lomuto(array, 0, size - 1, size);
 }
