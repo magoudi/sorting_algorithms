@@ -25,13 +25,10 @@ void lomuto(int *array, int low, int high, size_t size)
 			i1++;
 			if (array[i] == array[i1])
 				continue;
-			if (array[i] < array[i1])
-			{
-				tmp = array[i];
-				array[i] = array[i1];
-				array[i1] = tmp;
-				print_array(array, size);
-			}
+			tmp = array[i];
+			array[i] = array[i1];
+			array[i1] = tmp;
+			print_array(array, size);
 		}
 	}
 	i1++;
